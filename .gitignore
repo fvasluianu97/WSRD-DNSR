@@ -1,0 +1,7 @@
+__pycache__/*
+.idea/*
+venv/*
+checkpoints/*
+loaded_models/*
+results/*
+wandb/*
