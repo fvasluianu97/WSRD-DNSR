@@ -5,3 +5,5 @@ checkpoints/*
 loaded_models/*
 results/*
 wandb/*
+datasets/*
+results_v2/*
