@@ -23,3 +23,21 @@ Along with the provided data, we also provide results for DNSR, a baseline optim
  * Additional results for the ISTD/ISTD+ benchmarks are available [here](https://drive.google.com/drive/folders/1H2YyWB2_XxK7GEAksdLitRUB6jbCMOmQ?usp=sharing).
 
 Please follow the current repository for more updates. 
+
+
+# NTIRE 2024 and WSRD+
+
+A version of the WSRD Dataset will be used as a benchmark for the **NTIRE24 Challenge on Image Shadow Removal**. 
+The challenge has a [fidelity track](https://codalab.lisn.upsaclay.fr/competitions/17539) and a [perceptual track](https://codalab.lisn.upsaclay.fr/competitions/17546).
+
+# Training data
+This new version proposes improved pixel-alignment through  homography estimation. 
+[train input link](https://drive.google.com/file/d/1n9l3UyQw6HjCXqycvHAfl4T-jsJpPHeJ/view?usp=drive_link) | [train gt link](https://drive.google.com/file/d/1DZEMIJ8PIxmZww8iAqlcvlKWyfssNQRO/view?usp=sharing).
+
+# Validation data
+The validation split is used in the Development Phase of the challenge. Therefore, we provide, for now, only the [input images](https://drive.google.com/file/d/1l2aertz2qKVLUkP-egwiCBcyf_5GWnav/view?usp=sharing). 
+After the end of the challenge, the ground-truth images will be made public. You can submit to the validation server to get an evaluation. 
+
+# Testing data
+The test split will be used in the final Test Phase. Since we are aiming for proper evaluation on unseen data, these images will stay, for the moment, private.
+
