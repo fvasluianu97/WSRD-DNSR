@@ -16,7 +16,7 @@ def compute_mssim(ref_img, res_img):
 
 
 if __name__ == '__main__':
-    res_dir = "results/DNSR-wsrd2-r4"
+    res_dir = "results_drive/DNSR_ISTD+_RES"
 
     file_names = sorted([f for f in os.listdir(res_dir) if f.endswith("_im.png")])
     num_samples = len(file_names)
@@ -54,9 +54,13 @@ if __name__ == '__main__':
         out_lab = color.rgb2lab(out_img)
         gt_lab = color.rgb2lab(gt_img)
 
-        lab_rmse += np.sqrt(mean_squared_error(out_lab, gt_lab))
-        lab_shrmse += np.sqrt(mean_squared_error(mask * out_lab, mask * gt_lab) * ratio1)
-        lab_frmse += np.sqrt(mean_squared_error((1 - mask) * out_lab, (1 - mask) * gt_lab) * ratio2)
+        # lab_rmse += np.sqrt(mean_squared_error(out_lab, gt_lab))
+        # lab_shrmse += np.sqrt(mean_squared_error(mask * out_lab, mask * gt_lab) * ratio1)
+        # lab_frmse += np.sqrt(mean_squared_error((1 - mask) * out_lab, (1 - mask) * gt_lab) * ratio2)
+        h, w, _ = gt_lab.shape
+        lab_rmse += 1 / (h * w) * np.sum(np.abs(out_lab - gt_lab))
+        lab_shrmse += ratio1 * 1 / (h * w) * np.sum(np.abs(mask * out_lab - mask * gt_lab))
+        lab_frmse += ratio2 * 1 / (h * w) * np.sum(np.abs((1 - mask) * out_lab - (1 - mask) * gt_lab))
 
 
     mse /= num_samples
