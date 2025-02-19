@@ -40,6 +40,14 @@ This new version proposes improved pixel-alignment through  homography estimatio
 The validation split is used in the Development Phase of the challenge. 
 Here, you can download the [input images](https://drive.google.com/file/d/1l2aertz2qKVLUkP-egwiCBcyf_5GWnav/view?usp=sharing) | [ground truth images](https://drive.google.com/file/d/1a8JVs_zVQSdmxeDYJnqeEyynd9wV6n5D/view?usp=sharing). 
 
+
+
 # Testing data
 The test split will be used in the final Test Phase. Since we are aiming for proper evaluation on unseen data, these images will stay, for the moment, private.
 
+# Online validation system
+To test your model on both validation and testing splits, you can use the [Codalab competition](https://codalab.lisn.upsaclay.fr/competitions/17539) which will remain open.
+[Results](https://codalab.lisn.upsaclay.fr/competitions/17539#results) comparing the teams participating in the 2024 challenge are also available. 
+
+# Further Requests
+For access and other requests feel free to drop us an [email](mailto:florin-alexandru.vasluianu@uni-wuerzburg.de). 
